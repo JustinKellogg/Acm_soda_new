@@ -39,7 +39,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/Users/josheads/code/acm_soda/media/'
+MEDIA_ROOT = 'S:/acmsoda/acm_soda/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -58,6 +58,7 @@ SECRET_KEY = 'hc)0=ded!zn_kebxvuzy$ll-mooon!8b)yf67xz@=#43@(an6a'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
+	'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.load_template_source',
 )
 
@@ -71,7 +72,7 @@ ROOT_URLCONF = 'acm_soda.urls'
 
 TEMPLATE_DIRS = (
     #'/home/numix/code/acm_soda/templates/',
-    '/Users/josheads/code/acm_soda/templates',
+    '/nethome/users/jrl2n4/acmsoda/acm_soda/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -87,13 +88,13 @@ INSTALLED_APPS = (
     'django.contrib.admin'
 )
 
-STATIC_DOC_ROOT = '/Users/josheads/code/acm_soda/media/'
+STATIC_DOC_ROOT = 'S:/acmsoda/acm_soda/media'
 LOGIN_REDIRECT_URL = 'web/profile'
 LOGIN_URL = '/web/login'
 
 # Override these settings w/ production settings if on the Soda Server
-if socket.gethostname() == 'acmsoda':
-    try:
-        from production_settings import *
-    except ImportError, exp:
-        pass
+#if socket.gethostname() == 'acmsoda':
+#    try:
+#        from production_settings import *
+#    except ImportError, exp:
+#        pass

@@ -32,7 +32,7 @@ class Transaction(models.Model):
     description = models.CharField(max_length=200)
     
     class Meta:
-        abstract = True
+        abstract = False
         ordering = ['-date_time']
 
 # A subclass of Transaction, used to model administrative deposits and withdrawls

@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     (r'^api/', include('acm_soda.api.urls')),
     
     #Admin page
-    (r'^admin/(.*)', admin.site.root),
+    (r'^admin/',(admin.site.urls) ),
     
     #dev server media
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', 
