@@ -1,5 +1,7 @@
 === Missouri S&T ACM Soda Machine Web Interface ===
 
+CHANGE
+
 Authors: Josh Bohde, Josh Eads
 
 Description: Web interface using Django/Python to our Pepsi soda machine that has been in ACM's possession since forever.  Eventually will interact with the microcontroller inside of the soda machine to dispense sodas etc...
