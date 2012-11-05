@@ -39,7 +39,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = 'S:/acmsoda/acm_soda/media'
+MEDIA_ROOT = '/nethome/users/jrl2n4/acmsoda/acm_soda/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -88,7 +88,7 @@ INSTALLED_APPS = (
     'django.contrib.admin'
 )
 
-STATIC_DOC_ROOT = 'S:/acmsoda/acm_soda/media'
+STATIC_DOC_ROOT = '/nethome/users/jrl2n4/acmsoda/acm_soda/media'
 LOGIN_REDIRECT_URL = 'web/profile'
 LOGIN_URL = '/web/login'
 
