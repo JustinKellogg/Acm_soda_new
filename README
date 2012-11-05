@@ -1,0 +1,11 @@
+=== Missouri S&T ACM Soda Machine Web Interface ===
+
+Authors: Josh Bohde, Josh Eads
+
+Description: Web interface using Django/Python to our Pepsi soda machine that has been in ACM's possession since forever.  Eventually will interact with the microcontroller inside of the soda machine to dispense sodas etc...
+
+Usage: 
+  * Install Django 1.0 or greater + Python 2.6.x
+  * Run 'python manage.py syncdb' and provide a default admin profile
+  * Run 'python manage.py runserver' and start playing around
+  * Can configure everything using /admin/ django panel

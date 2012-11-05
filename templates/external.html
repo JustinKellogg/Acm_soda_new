@@ -1,0 +1,22 @@
+{% extends "base_external.html" %}
+{% block title %}Missouri S&amp;T ACM Soda{% endblock %}
+{% block content %}
+
+    <!--Inventory & other status info-->
+    <div id="external_status">
+    <h2>Soda Machine Status</h1>
+    <h3>Inventory</h2>
+    <table>
+        <th>Soda Name</th><th>Quantity Available</th>
+        {% for inventory in inventories %}
+            <tr><td>{{inventory.soda.description}}</td><td>{{inventory.quantity}}</td></tr>
+        {% endfor %}
+    </table>
+
+    <h3>Server Status</h2>
+    <!-- TODO: Loop through server stats and print out (uptime, sodas vended?, etc..)-->
+    <p>Uptime: x sec</p>
+
+    </div>
+
+{% endblock %}

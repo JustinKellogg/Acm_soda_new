@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Missouri S&amp;T ACM Soda{% block title %}{% endblock %}</title>
+  <link href='/media/css/base.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="title">
+    <h1><a href="/">Missouri S&amp;T ACM Soda Machine</a></h1>
+  </div>
+  {% block content %}{% endblock %}
+  {% if not request.user.is_anonymous %}
+      <p>Hello <a href="/web/profile/">{{request.user.username}}</a></p>
+      <p><a href="/web/logout">Logout</a></p>
+  {% else %}
+      <p><a class="login" href="/web/login/">Login</a></p>
+  {% endif %}
+</body>
+</html>

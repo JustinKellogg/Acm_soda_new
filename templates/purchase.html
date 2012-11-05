@@ -1,0 +1,12 @@
+{% extends "base_external.html" %}
+{% block title %}Missouri S&amp;T ACM Soda{% endblock %}
+{% block content %}
+
+{% if success %}
+    <p>Successfully purchased a {{soda.description}}!</p>
+    <p><a href="/web/profile">Return to Profile</a></p>
+{% else %}
+    <h3>Error: Please navigate here by submitting a purchase!</h3>
+{% endif %}
+
+{% endblock %}

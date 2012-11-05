@@ -1,0 +1,34 @@
+{% extends "base_external.html" %}
+{% load acm_tags %}
+
+{% block title %}{% endblock %}
+{% block content %}
+<!--User Profile-->
+<!-- Pull account balance, purchase history, etc... -->
+<h3>{{user.user.first_name}} {{user.user.last_name}} ({{user.user.username}})</h3>
+{% if current_user %}
+    <p>Balance: ${{user.balance|dollars}}</p>
+    <h4>Vending</h4>
+    <form action="/web/purchase/" method="post">
+        <p>Purchase Soda: 
+            <select name="soda">
+                {% for soda in available_sodas %}
+                    <option value={{soda.short_name}}>{{soda.description}} - ${{soda.cost|dollars}}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <input type="submit" value="Submit" />
+    </form>
+    <h4>Transaction List</h4>
+    {% if transactions %}
+        {% for transaction in transactions %}
+            <p>{{transaction.date_time|date:"fA M d, Y"}}: {{transaction.description}} , ${{transaction.amount|dollars}}</p>
+        {% endfor %}
+    {% else %}
+        <p>No transactions found in your history.</p>
+    {% endif %}
+{% else %}
+    <!-- No private information shown if we're not this user! -->
+{% endif %}
+
+{% endblock %}
