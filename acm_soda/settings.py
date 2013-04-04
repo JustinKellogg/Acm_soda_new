@@ -63,9 +63,10 @@ SECRET_KEY = 'hc)0=ded!zn_kebxvuzy$ll-mooon!8b)yf67xz@=#43@(an6a'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
-	'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.filesystem.Loader',
+  #  'django.template.loaders.filesystem.load_template_source',
+  #  'django.template.loaders.app_directories.load_template_source',
 #     'django.template.loaders.eggs.load_template_source',
 )
 
@@ -80,6 +81,7 @@ ROOT_URLCONF = 'acm_soda.urls'
 TEMPLATE_DIRS = (
     #'/home/numix/code/acm_soda/templates/',
     os.path.join(os.path.dirname(__file__), 'templates')
+
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
