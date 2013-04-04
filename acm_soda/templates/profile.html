@@ -9,7 +9,7 @@
 {% if current_user %}
     <p>Balance: ${{user.balance|dollars}}</p>
     <h4>Vending</h4>
-    <form action="/web/purchase/" method="post">
+    <form action="/acm_soda/web/purchase/" method="post">
         <p>Purchase Soda: 
             <select name="soda">
                 {% for soda in available_sodas %}

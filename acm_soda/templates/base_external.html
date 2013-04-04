@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Missouri S&amp;T ACM Soda{% block title %}{% endblock %}</title>
-  <link href='/media/css/base.css' rel='stylesheet' type='text/css'>
+  <link href='/acm_soda/mediaoda/media/css/base.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div id="title">
@@ -9,10 +9,10 @@
   </div>
   {% block content %}{% endblock %}
   {% if not request.user.is_anonymous %}
-      <p>Hello <a href="/web/profile/">{{request.user.username}}</a></p>
-      <p><a href="/web/logout">Logout</a></p>
+      <p>Hello <a href="/acm_soda/web/profile/">{{request.user.username}}</a></p>
+      <p><a href="/acm_soda/web/logout">Logout</a></p>
   {% else %}
-      <p><a class="login" href="/web/login/">Login</a></p>
+      <p><a class="login" href="/acm_soda/web/login/">Login</a></p>
   {% endif %}
 </body>
 </html>

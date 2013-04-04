@@ -1,5 +1,5 @@
-from views import dispatch_method
-from django.http import HttpResponse
+from acm_soda.views import dispatch_method
+
 
 @dispatch_method
 def test(request):

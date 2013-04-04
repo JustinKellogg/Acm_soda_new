@@ -6,12 +6,13 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     ('Josh Bohde', 'josh.bohde@gmail.com'),
     ('Josh Eads', 'eads.josh@gmail.com'),
+    ('Justin Kellogg', 'justin.kellogg@mst.edu')
 )
 
 MANAGERS = ADMINS
 
-''' !!! DEVELOPMENT SETTINGS ONLY !!! '''
-''' DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+#''' !!! DEVELOPMENT SETTINGS ONLY !!! '''
+DATABASE_ENGINE = 'django.db.backends.sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'acm_soda'             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
@@ -19,12 +20,12 @@ DATABASE_HOST = ''             # Set to empty string for localhost. Not used wit
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3. '''
 
 # Production Server Settings
-DATABASE_ENGINE = 'postgresql'
-DATABASE_NAME = 'acm_soda'
-DATABASE_USER = 'soda'
-DATABASE_PASSWORD = 'sodasoda'
-DATABASE_HOST = ''
-DATABASE_PORT = ''
+#DATABASE_ENGINE = 'postgresql'
+#DATABASE_NAME = 'acm_soda'
+#DATABASE_USER = 'soda'
+#DATABASE_PASSWORD = 'sodasoda'
+#DATABASE_HOST = ''
+#DATABASE_PORT = ''
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
