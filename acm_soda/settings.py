@@ -80,7 +80,8 @@ ROOT_URLCONF = 'acm_soda.urls'
 
 TEMPLATE_DIRS = (
     #'/home/numix/code/acm_soda/templates/',
-    os.path.join(os.path.dirname(__file__), 'templates')
+  #  "C:/Users/Justin/PycharmProjects/Acm_soda_new/acm_soda/templates",
+    os.path.join(os.path.dirname(__file__), 'templates'),
 
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
